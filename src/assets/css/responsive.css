@@ -1,0 +1,104 @@
+@media only screen and (min-width: 1900px) {
+}
+@media only screen and (max-width: 1200px) and (min-width: 992px) {
+}
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+  .hero-content h1 {
+    font-size: 80px;
+  }
+  header .navbar .navbar-collapse {
+    background-color: transparent;
+    padding-bottom: 30px;
+  }
+  .participate-section .single-card {
+    display: block;
+    min-height: auto;
+  }
+  .farming-title h1 {
+    font-size: 32px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .section-block {
+    padding: 50px 0px;
+  }
+  .hero-section {
+    padding: 150px 0px 80px;
+  }
+  .hero-content h1 {
+    font-size: 50px;
+  }
+  .hero-content p {
+    font-size: 16px;
+  }
+  .single-count span:first-child {
+    font-size: 33px;
+  }
+  .single-count {
+    padding: 20px 5px;
+    margin-bottom: 20px;
+  }
+  header .navbar .navbar-collapse {
+    background-color: transparent;
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+  .content-block h2 {
+    font-size: 32px;
+    text-align: center;
+  }
+  .number p {
+    font-size: 50px;
+  }
+  .title .wrap img {
+    max-width: 60px;
+  }
+  .number {
+    padding-left: 70px;
+    min-height: 80px;
+  }
+  .title .wrap {
+    padding-left: 90px;
+    min-height: 80px;
+  }
+  .coming-soon {
+    font-size: 20px;
+    padding: 20px 10px;
+    max-width: 100%;
+    width: 100%;
+  }
+  .content-block {
+    margin-bottom: 20px;
+  }
+  .code-wrapper {
+    padding: 30px 15px;
+  }
+  .participate-section .single-card {
+    display: block;
+    padding: 30px 15px;
+    min-height: auto;
+  }
+  .single-card.smaller {
+    margin-bottom: 30px;
+  }
+
+  .yfipool-section .content-block {
+    padding-bottom: 10px;
+  }
+
+  .record-box {
+    padding: 30px 20px 20px;
+  }
+
+  .single-record {
+    margin-bottom: 30px;
+  }
+  .pull-right {
+    position: relative;
+    left: 0;
+    margin-top: 10px;
+  }
+  .farming-title h1 {
+    font-size: 25px;
+  }
+}
