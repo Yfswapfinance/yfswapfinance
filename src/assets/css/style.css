@@ -1480,12 +1480,38 @@ span.coin-name {
 button.border-tp-btn.clearfix {
   padding: 15px 10px;
 }
-.wallet-top.no-grid{
+.wallet-top.no-grid {
   display: block;
 }
 .percent-btn.pink {
-  border: 1px solid #C91F66;
+  border: 1px solid #c91f66;
   background: transparent;
   padding: 2px 6px;
   margin-bottom: 5px;
+}
+
+.inner-box .single-box h4.blue-title {
+  color: #242166;
+  font-weight: 600;
+}
+
+.amount {
+  font-size: 30px;
+  color: #242166;
+  font-weight: 600;
+}
+
+.balance.small {
+  font-size: 10px;
+  color: #707070;
+}
+
+.bg.inner-box {
+  background: #F7F7F7;
+  margin-bottom: -20px;
+  padding-bottom: 40px;
+}
+
+p.balance img {
+  padding-right: 5px;
 }

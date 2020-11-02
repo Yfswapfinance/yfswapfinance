@@ -14,6 +14,8 @@ import SufficientBalance from './pages/SufficientBalance';
 import ConfirmSwap from './pages/ConfirmSwap';
 import AddLiquidity from './pages/AddLiquidity';
 import ImportPool from './pages/ImportPool';
+import AddLiquiditySupply from './pages/AddLiquiditySupply';
+import AddLiquidityConfirm from './pages/AddLiquidityConfirm';
 
 import {
   BrowserRouter as Router,
@@ -62,6 +64,12 @@ function App() {
           </Route>
           <Route path="/add-liquidity">
             <AddLiquidity />
+          </Route>
+          <Route path="/add-liquidity-supply">
+            <AddLiquiditySupply />
+          </Route>
+          <Route path="/add-liquidity-confirm">
+            <AddLiquidityConfirm />
           </Route>
           <Route path="/import-pool">
             <ImportPool />
