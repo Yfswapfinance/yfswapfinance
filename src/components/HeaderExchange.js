@@ -144,7 +144,7 @@ export default class HeaderExchange extends Component {
         {/* My wallet Balance Start */}
         
         {/* My wallet Balance Start */}
-          <Modal 
+          {/* <Modal 
           size="lg"
           show={this.state.isOpen} onHide={this.closeModal}
           aria-labelledby="contained-modal-title-vcenter"
@@ -182,8 +182,54 @@ export default class HeaderExchange extends Component {
                 <h4>Your transactions will appear here…</h4>
               </div>
             </Modal.Body>
+          </Modal> */}
+        {/* My wallet Balance end */}
+
+        {/* My wallet Transaction Start */}
+          <Modal 
+          size="lg"
+          show={this.state.isOpen} onHide={this.closeModal}
+          aria-labelledby="contained-modal-title-vcenter"
+          centered
+          className="walletaccount"
+          >
+            <Modal.Body>
+              <div className="wallet-body">
+                <div className="wallet-top">
+                  <h4 className="mb-3">Account</h4>
+                  <button className="transparent-btn"
+                    onClick={this.closeModal} >
+                    <img src={require("../assets/img/close.svg")} alt="" />
+                  </button>
+                </div>
+                <div className="modal-innerbox">
+                  <div className="title">
+                    <span>Connected to Metamask</span>
+                    <button className="primary-btn blue sm">Change</button>
+                  </div>
+                  <div className="balance">
+                    <img src={require("../assets/img/icon.svg")} alt="" /> <span>0xD4fgh…UhG</span>
+                  </div>
+                  <div className="btns">
+                    <button className="transparent-btn">
+                      <img src={require("../assets/img/copy.svg")} alt="" /> Copy address
+                    </button>
+                    <button className="transparent-btn">
+                      <img src={require("../assets/img/view.svg")} alt="" /> View on Etherscan
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div className="modal-bottom">
+                <h4>Your transactions will appear here…</h4>
+                <h4 className="blue">Swap 0.492 ETH for 20 USDT <img src={require("../assets/img/arrow-angle.svg")} alt="" /></h4>
+                <button className="transparent-btn blue">
+                  (Clear all)
+                </button>
+              </div>
+            </Modal.Body>
           </Modal>
-        {/* My wallet Balance Start */}
+        {/* My wallet Transaction end */}
       </div>
     )
   }

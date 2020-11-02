@@ -1048,8 +1048,6 @@ header .navbar .navbar-nav .nav-item .nav-link.primary-btn {
   margin-top: 10px;
 }
 
-
-
 .modal-innerbox .btns .transparent-btn {
   font-size: 14px;
   display: inline-block;
@@ -1089,3 +1087,33 @@ header .navbar .navbar-nav .nav-item .nav-link.primary-btn {
 .modal-innerbox .title {
   padding-right: 90px;
 }
+
+.walletaccount .modal-content .modal-bottom {
+  position: relative;
+  padding-right: 100px;
+}
+
+.walletaccount .modal-content .modal-bottom .transparent-btn.blue {
+  position: absolute;
+  right: 20px;
+  top: 29px;
+}
+
+.transparent-btn.blue {
+  color: #21dad7;
+}
+
+.walletaccount .modal-content .modal-bottom h4.blue {
+  font-size: 14px;
+  padding-top: 5px;
+  color: #21dad7;
+}
+
+.walletaccount .modal-content .modal-bottom h4.blue img {
+  padding-left: 10px;
+}
+
+.walletaccount .modal-content .modal-bottom h4 {
+  font-size: 14px;
+}
+
