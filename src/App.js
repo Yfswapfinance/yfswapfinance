@@ -1,12 +1,14 @@
 import React from 'react';
 import Header from './components/Header';
 import HeaderUser from './components/HeaderUser';
+import HeaderExchange from './components/HeaderExchange';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Menu from './pages/Menu';
 import YfethHarvestParty from './pages/YfethHarvestParty';
 import BittoHarvestParty from './pages/BittoHarvestParty';
 import Staking from './pages/Staking';
+import Exchange from './pages/Exchange';
 
 import {
   BrowserRouter as Router,
@@ -19,6 +21,7 @@ function App() {
     <Router>
       <Switch>
         <Route exact path="/" component={Header} />
+        <Route exact path="/exchange" component={HeaderExchange} />
         <Route component={HeaderUser} />
       </Switch>
         <Switch>
@@ -36,6 +39,9 @@ function App() {
           </Route>
           <Route path="/staking">
             <Staking />
+          </Route>
+          <Route path="/exchange">
+            <Exchange />
           </Route>
         </Switch>
         <Footer/>

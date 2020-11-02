@@ -2,7 +2,7 @@
 }
 @media only screen and (max-width: 1200px) and (min-width: 992px) {
 }
-@media only screen and (max-width: 991px) and (min-width: 768px) {
+@media only screen and (max-width: 991px) {
   .hero-content h1 {
     font-size: 80px;
   }
@@ -16,6 +16,27 @@
   }
   .farming-title h1 {
     font-size: 32px;
+  }
+  li.nav-item.dark-switch {
+    padding-left: 20px;
+    margin-bottom: 10px;
+  }
+
+  header .navbar .navbar-nav .nav-item .nav-link.active:after {
+    left: 20px;
+    right: auto;
+  }
+  .nav-item.border-right-color {
+    padding-left: 20px;
+  }
+
+  .nav-item .transparent-btn {
+    padding-left: 20px;
+    margin-top: 10px;
+  }
+
+  .nav-item.border-right-color:after {
+    display: none;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -101,4 +122,17 @@
   .farming-title h1 {
     font-size: 25px;
   }
+  .accountmodal .modal-content,
+  .my-account .modal-content {
+    padding: 10px;
+  }
+  .walletaccount .modal-content .wallet-body {
+    padding: 10px;
+}
+
+.modal-innerbox {
+    padding: 5px;
+}
+
+
 }

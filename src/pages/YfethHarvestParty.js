@@ -30,7 +30,7 @@ export default class YfethHarvestParty extends Component {
                     <div className="col-lg-7">
                       <div className="farming-title">
                         <div className="logo mb-3">
-                          <img src={require("../assets/img/yfeth-logo.svg")} alt="" />
+                          <img src={require("../assets/img/yfeth-logo.svg")} alt="Yfeth Logo" />
                         </div>
                         <h1>Harvest Party!</h1>
                         <p>Deposit SUSHI-ETH SLP Tokens and earn SUSHI
@@ -44,7 +44,7 @@ export default class YfethHarvestParty extends Component {
                         <div className="single-stats corps harvest">
                           <div className="logo-wrap">
                             <div className="icon-wrap">
-                              <img src={require("../assets/img/yfeth-logo.svg")} alt="" />
+                              <img src={require("../assets/img/yfeth-logo.svg")} alt="Yfeth Logo" />
                             </div>
                             <h4>0.000</h4>
                             <p>YFETH Earned</p>
@@ -59,7 +59,7 @@ export default class YfethHarvestParty extends Component {
                         <div className="single-stats corps harvest">
                           <div className="logo-wrap">
                             <div className="icon-wrap">
-                              <img src={require("../assets/img/farming-icon.png")} alt="" />
+                              <img src={require("../assets/img/farming-icon.png")} alt="Farming" />
                             </div>
                             <h4>0.000</h4>
                             <p>YFETH-ETH SLP Tokens Staked

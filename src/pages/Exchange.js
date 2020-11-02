@@ -6,14 +6,14 @@ import '../assets/css/fontawesome.min.css';
 import '../assets/css/style.css';
 import '../assets/css/responsive.css';
 
-export default class Staking extends Component {
+export default class Exchange extends Component {
   render() {
     return (
       <div>
         
         <Helmet>
           <meta charSet="utf-8" />
-          <title>Staking | YFswap.finance</title>
+          <title>Exchange | YFswap.finance</title>
           <meta name="description" content="The First DeFi Version of Legacy Coins Such As BTC &amp; ETH. Introducing Dex, Yield farming, Decentralised Project" />
           <meta property="og:title" content="YFswap.finance"/>
           <meta property="og:description" content="The First DeFi Version of Legacy Coins Such As BTC &amp; ETH. Introducing Dex, Yield farming, Decentralised Project" />

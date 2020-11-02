@@ -1,6 +1,6 @@
-import React, { Component,useState } from 'react'
+import React, { Component } from 'react'
 import { Link,NavLink } from 'react-router-dom'
-import { Modal, Button } from 'react-bootstrap'
+import { Modal, Navbar } from 'react-bootstrap'
 
 import '../assets/css/bootstrap.min.css';
 import '../assets/css/fontawesome.min.css';
@@ -41,26 +41,18 @@ export default class Header extends Component {
           <div className="container">
             <div className="row">
               <div className="col-lg-12">
-                <nav className="navbar navbar-expand-lg">
+                <Navbar className="navbar navbar-expand-lg" expand="lg">
                   <Link className="navbar-brand" to="/">
                     <img src={require("../assets/img/logo.svg")} className="white" alt="YFSWAP" />
                     <img src={require("../assets/img/logo-dark.svg")} className="dark" alt="YFSWAP" />
                   </Link>
-                  <button
-                    className="navbar-toggler"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                  >
+                  <Navbar.Toggle aria-controls="basic-navbar-nav">
                     <span className="navbar-toggler-icon">
                       <i className="fa fa-bars"></i>
                     </span>
-                  </button>
+                  </Navbar.Toggle>
 
-                  <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                  <Navbar.Collapse className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto ml-auto">
                       <li className="nav-item">
                         <NavLink className="nav-link" exact to="/"  activeClassName="active">Home </NavLink>
@@ -95,8 +87,8 @@ export default class Header extends Component {
                         </button>
                       </li>
                     </ul>
-                  </div>
-                </nav>
+                  </Navbar.Collapse>
+                </Navbar>
               </div>
             </div>
           </div>

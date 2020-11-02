@@ -29,7 +29,7 @@ export default class Home extends Component {
                 <div className="hero-content text-center">
                   <div className="farming-title">
                     <div className="logo">
-                      <img src={require("../assets/img/farming-icon.png")} alt=""/>
+                      <img src={require("../assets/img/farming-icon.png")} alt="Farming"/>
                     </div>
                     <h1>Farming Is Ready</h1>
                     <p>Stake Uniswap LP tokens to claim your very own yummy YFBTC!</p>
@@ -40,7 +40,7 @@ export default class Home extends Component {
                         <div className="single-stats p-0">
                           <div className="contents">
                             <div className="logo">
-                              <img src={require("../assets/img/yfeth-logo.svg")} alt="" />
+                              <img src={require("../assets/img/yfeth-logo.svg")} alt="Yfeth Logo" />
                               <div className="text">
                                 <h4>Your YFETH Balance</h4>
                                 <h2>LOCKED</h2>
@@ -96,7 +96,7 @@ export default class Home extends Component {
                           </div>
                           <div className="content">
                             <div className="title bitto">
-                              <img src={require("../assets/img/bitto-stats.svg")} alt="" />
+                              <img src={require("../assets/img/bitto-stats.svg")} alt="Bitto Logo" />
                               <h3>BITTO/ETH Stats</h3>
                             </div>
                             <div className="desc">
@@ -122,7 +122,7 @@ export default class Home extends Component {
                           </div>
                           <div className="content">
                             <div className="title">
-                              <img src={require("../assets/img/yfeth-logo.svg")} alt="" />
+                              <img src={require("../assets/img/yfeth-logo.svg")} alt="Yfeth Logo" />
                               <h3>YFETH/ETH Stats</h3>
                             </div>
                             <div className="desc">
@@ -143,7 +143,7 @@ export default class Home extends Component {
                         <div className="single-stats">
                           <div className="content">
                             <div className="title yfi">
-                              <img src={require("../assets/img/yfi-stats.svg")} alt="" />
+                              <img src={require("../assets/img/yfi-stats.svg")} alt="Yfi Logo" />
                               <h3>YFI/ETH Stats</h3>
                             </div>
                             <div className="desc">
@@ -163,7 +163,7 @@ export default class Home extends Component {
                     </div>
                   </div>
                   <Link to="/menu" className="bordered-btn">
-                    <img src={require("../assets/img/shovel.svg")} alt="" /> Choose Your Farm
+                    <img src={require("../assets/img/shovel.svg")} alt="Shovel" /> Choose Your Farm
                   </Link>
                 </div>
               </div>

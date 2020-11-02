@@ -31,7 +31,7 @@ export default class BittoHarvestParty extends Component {
                       <div className="col-lg-7">
                         <div className="farming-title">
                           <div className="logo mb-n4">
-                            <img src={require("../assets/img/bitto-stats.svg")} alt="" />
+                            <img src={require("../assets/img/bitto-stats.svg")} alt="Bitto Stats" />
                           </div>
                           <h1>Harvest Party!</h1>
                           <p>Deposit BITTO-ETH ELP Tokens and earn SUSHI
@@ -45,7 +45,7 @@ export default class BittoHarvestParty extends Component {
                           <div className="single-stats corps harvest">
                             <div className="logo-wrap">
                               <div className="icon-wrap">
-                                <img src={require("../assets/img/yfeth-logo.svg")} alt="" />
+                                <img src={require("../assets/img/yfeth-logo.svg")} alt="Yfeth Logo" />
                               </div>
                               <h4>0.000</h4>
                               <p>YFETH Earned</p>
@@ -60,7 +60,7 @@ export default class BittoHarvestParty extends Component {
                           <div className="single-stats corps harvest">
                             <div className="logo-wrap">
                               <div className="icon-wrap">
-                                <img src={require("../assets/img/farming-icon.png")} alt="" />
+                                <img src={require("../assets/img/farming-icon.png")} alt="Farming" />
                               </div>
                               <h4>0.000</h4>
                               <p>BITTO-ETH ELP Tokens Staked</p>

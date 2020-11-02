@@ -31,10 +31,10 @@ export default class Menu extends Component {
                     <div className="col-lg-7">
                       <div className="farming-title">
                         <div className="logo">
-                          <img src={require("../assets/img/farming-icon.png")} alt="" />
+                          <img src={require("../assets/img/farming-icon.png")} alt="Farming" />
                         </div>
                         <h1>Select Your Favourite Crops</h1>
-                        <p>Earn YFETH tokens by staking YFETH/ETH V2 ELP Tokens. Note: Current APY will constantly change according to market supply & demand.
+                        <p>Earn YFETH tokens by staking YFETH/ETH V2 ELP Tokens. Note: Current APY will constantly change according to market supply &amp; demand.
                         </p>
                       </div>
                     </div>
@@ -50,7 +50,7 @@ export default class Menu extends Component {
                           </div>
                           <div className="logo-wrap">
                             <div className="icon-wrap">
-                              <img src={require("../assets/img/yfeth-logo.svg")} alt="" />
+                              <img src={require("../assets/img/yfeth-logo.svg")} alt="Yfeth Logo" />
                             </div>
                             <h4>YFETH Party!</h4>
                             <p>Deposit YFETH-ETH ELP
@@ -83,7 +83,7 @@ export default class Menu extends Component {
                           </div>
                           <div className="logo-wrap">
                             <div className="icon-wrap">
-                              <img src={require("../assets/img/bitto-stats.svg")} alt="" />
+                              <img src={require("../assets/img/bitto-stats.svg")} alt="Bitto Logo" />
                             </div>
                             <h4>BITTO 2 da moon</h4>
                             <p>Deposit BITTO-ETH ELP
@@ -111,7 +111,7 @@ export default class Menu extends Component {
                         <div className="single-stats corps shadow-black">
                           <div className="logo-wrap">
                             <div className="icon-wrap">
-                              <img src={require("../assets/img/bitto-stats.svg")} alt="" />
+                              <img src={require("../assets/img/bitto-stats.svg")} alt="Bitto Logo" />
                             </div>
                             <h4>BITTO 2 da moon</h4>
                             <p>Deposit BITTO-ETH ELP
@@ -139,7 +139,7 @@ export default class Menu extends Component {
                         <div className="single-stats corps shadow-black">
                           <div className="logo-wrap">
                             <div className="icon-wrap">
-                              <img src={require("../assets/img/bitto-stats.svg")} alt="" />
+                              <img src={require("../assets/img/bitto-stats.svg")} alt="Bitto Logo" />
                             </div>
                             <h4>BITTO 2 da moon</h4>
                             <p>Deposit BITTO-ETH ELP
@@ -167,7 +167,7 @@ export default class Menu extends Component {
                         <div className="single-stats corps shadow-black">
                           <div className="logo-wrap">
                             <div className="icon-wrap">
-                              <img src={require("../assets/img/bitto-stats.svg")} alt="" />
+                              <img src={require("../assets/img/bitto-stats.svg")} alt="Bitto Logo" />
                             </div>
                             <h4>BITTO 2 da moon</h4>
                             <p>Deposit BITTO-ETH ELP
@@ -195,7 +195,7 @@ export default class Menu extends Component {
                         <div className="single-stats corps shadow-black">
                           <div className="logo-wrap">
                             <div className="icon-wrap">
-                              <img src={require("../assets/img/bitto-stats.svg")} alt="" />
+                              <img src={require("../assets/img/bitto-stats.svg")} alt="Bitto Logo" />
                             </div>
                             <h4>BITTO 2 da moon</h4>
                             <p>Deposit BITTO-ETH ELP
@@ -223,7 +223,7 @@ export default class Menu extends Component {
                         <div className="single-stats corps shadow-black">
                           <div className="logo-wrap">
                             <div className="icon-wrap">
-                              <img src={require("../assets/img/bitto-stats.svg")} alt="" />
+                              <img src={require("../assets/img/bitto-stats.svg")} alt="Bitto Logo" />
                             </div>
                             <h4>BITTO 2 da moon</h4>
                             <p>Deposit BITTO-ETH ELP
@@ -251,7 +251,7 @@ export default class Menu extends Component {
                         <div className="single-stats corps shadow-black">
                           <div className="logo-wrap">
                             <div className="icon-wrap">
-                              <img src={require("../assets/img/bitto-stats.svg")} alt="" />
+                              <img src={require("../assets/img/bitto-stats.svg")} alt="Bitto Logo" />
                             </div>
                             <h4>BITTO 2 da moon</h4>
                             <p>Deposit BITTO-ETH ELP
@@ -279,7 +279,7 @@ export default class Menu extends Component {
                         <div className="single-stats corps shadow-black">
                           <div className="logo-wrap">
                             <div className="icon-wrap">
-                              <img src={require("../assets/img/bitto-stats.svg")} alt="" />
+                              <img src={require("../assets/img/bitto-stats.svg")} alt="Bitto Logo" />
                             </div>
                             <h4>BITTO 2 da moon</h4>
                             <p>Deposit BITTO-ETH ELP
