@@ -9,6 +9,11 @@ import YfethHarvestParty from './pages/YfethHarvestParty';
 import BittoHarvestParty from './pages/BittoHarvestParty';
 import Staking from './pages/Staking';
 import Exchange from './pages/Exchange';
+import InsufficientBalance from './pages/InsufficientBalance';
+import SufficientBalance from './pages/SufficientBalance';
+import ConfirmSwap from './pages/ConfirmSwap';
+import AddLiquidity from './pages/AddLiquidity';
+import ImportPool from './pages/ImportPool';
 
 import {
   BrowserRouter as Router,
@@ -22,6 +27,9 @@ function App() {
       <Switch>
         <Route exact path="/" component={Header} />
         <Route exact path="/exchange" component={HeaderExchange} />
+        <Route exact path="/insufficient-balance" component={HeaderExchange} />
+        <Route exact path="/sufficient-balance" component={HeaderExchange} />
+        <Route exact path="/confirm-swap" component={HeaderExchange} />
         <Route component={HeaderUser} />
       </Switch>
         <Switch>
@@ -42,6 +50,21 @@ function App() {
           </Route>
           <Route path="/exchange">
             <Exchange />
+          </Route>
+          <Route path="/insufficient-balance">
+            <InsufficientBalance />
+          </Route>
+          <Route path="/sufficient-balance">
+            <SufficientBalance />
+          </Route>
+          <Route path="/confirm-swap">
+            <ConfirmSwap />
+          </Route>
+          <Route path="/add-liquidity">
+            <AddLiquidity />
+          </Route>
+          <Route path="/import-pool">
+            <ImportPool />
           </Route>
         </Switch>
         <Footer/>

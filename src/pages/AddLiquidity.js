@@ -6,9 +6,8 @@ import '../assets/css/bootstrap.min.css';
 import '../assets/css/fontawesome.min.css';
 import '../assets/css/style.css';
 import '../assets/css/responsive.css';
-import { Link } from 'react-router-dom';
 
-export default class Exchange extends Component {
+export default class AddLiquidity extends Component {
   state = {
     isOpen: false
   };
@@ -40,78 +39,57 @@ export default class Exchange extends Component {
                       <div className="row justify-content-center">
                         <div className="col-lg-5 col-md-6">
                           <div className="single-card exchange-card">
-                            <Tabs defaultActiveKey="swap" id="uncontrolled-tab-example">
-                              <Tab eventKey="swap" title="Swap">
-                                <div className="inner-box mb-0">
-                                  <div className="single-box">
-                                    <div className="row align-items-end">
-                                      <div className="col-6 text-left">
-                                        <h4>From (estimated)</h4>
-                                        <input type="number" step="0.0000000000000000001" min="0" autoComplete="off" placeholder="0.0" />
-                                      </div>
-                                      <div className="col-6 text-right">
-                                        <p className="balance">Balance: <span id="ethBalance">0.00</span></p>
-                                        <div className="icons">
-                                          <button className="transparent-btn">
-                                            <img src={require("../assets/img/max.svg")} alt="Max" /> 
-                                          </button>
-                                          <button className="transparent-btn"  onClick={this.openModal}>
-                                            <span><img src={require("../assets/img/etherum.svg")} alt="Yfteh" /></span> 
-                                            <span className="coin-name">ETH</span>
-                                            <span><img src={require("../assets/img/angle-down-sm.svg")} alt="Angle Down" /></span>
-                                          </button>
-                                        </div>
-                                      </div>
-                                    </div>
+                            <div className="title-box">
+                              <button className="transparent-btn back">
+                                <span><img src={require("../assets/img/back.svg")} alt="Back" /></span> 
+                              </button>
+                              <h4>Add Liquidity</h4>
+                              <button className="transparent-btn what">
+                                <span><img src={require("../assets/img/what-sign.svg")} alt="What" /></span> 
+                              </button>
+                            </div>
+                            <div className="inner-box mb-0">
+                              <div className="single-box">
+                                <div className="row align-items-end">
+                                  <div className="col-6 text-left">
+                                    <h4>Input</h4>
+                                    <input type="number" step="0.0000000000000000001" min="0" autoComplete="off" placeholder="0.0" />
                                   </div>
-                                  <div className="text-center">
-                                    <img src={require("../assets/img/pink-arrow-down.svg")} alt=""/>
-                                  </div>
-                                  <div className="single-box">
-                                    <div className="row align-items-end">
-                                      <div className="col-6 text-left">
-                                        <h4>to</h4>
-                                        <p className="convesion">0.0</p>
-                                      </div>
-                                      <div className="col-6 text-right">
-                                        <p className="balance">Balance: <span id="ethBalance">0.00</span></p>
-                                        <div className="icons">
-                                          <button className="transparent-btn red-btn"  onClick={this.openModal}>
-                                            Select a token <img src={require("../assets/img/white-arrow-down.svg")} alt="Arrow Down" /> 
-                                          </button>
-                                        </div>
-                                      </div>
+                                  <div className="col-6 text-right">
+                                    <p className="balance">Balance: <span id="ethBalance">0.00</span></p>
+                                    <div className="icons">
+                                      <button className="transparent-btn"  onClick={this.openModal}>
+                                        <span><img src={require("../assets/img/etherum.svg")} alt="Yfteh" /></span> 
+                                        <span className="coin-name">ETH</span>
+                                        <span><img src={require("../assets/img/angle-down-sm.svg")} alt="Angle Down" /></span>
+                                      </button>
                                     </div>
                                   </div>
                                 </div>
-                                <div className="text-center footer-btns">
-                                  <Link to="/insufficient-balance">
-                                    <button className="bordered-btn gray full-width">ENTER AN AMOUNT</button>
-                                  </Link>
-                                </div>
-                              </Tab>
-                              <Tab eventKey="pool" title="Pool">
-                                <div className="text-center footer-btns mt-5 mb-2">
-                                  <button className="bordered-btn gray red-btn full-width">ADD LIQUIDITY</button>
-                                </div>
-                                <div className="inner-box mb-0">
-                                  <div className="wallet-top text-left">
-                                    <h4 className="mb-3">Your liquidity</h4>
-                                    <button className="transparent-btn" >
-                                      <img src={require("../assets/img/what-sign.svg")} alt="" />
-                                    </button>
+                              </div>
+                              <div className="text-center my-2">
+                                <img src={require("../assets/img/plus.svg")} alt=""/>
+                              </div>
+                              <div className="single-box">
+                                <div className="row align-items-end">
+                                  <div className="col-6 text-left">
+                                    <h4>Input</h4>
+                                    <input type="number" step="0.0000000000000000001" min="0" autoComplete="off" placeholder="0.0" />
                                   </div>
-                                  <div className="single-box">
-                                    <div className="inner-content">
-                                      <span>No liquidity found</span>
+                                  <div className="col-6 text-right">
+                                    <p className="balance">-</p>
+                                    <div className="icons">
+                                      <button className="transparent-btn red-btn"  onClick={this.openModal}>
+                                        Select a token <img src={require("../assets/img/white-arrow-down.svg")} alt="Arrow Down" /> 
+                                      </button>
                                     </div>
                                   </div>
-                                  <div className="text-center small-note">
-                                    <span>Don’t see a pool you joined? <Link to="/import-pool" className="link">Import it</Link>  .</span>
-                                  </div>
                                 </div>
-                              </Tab>
-                            </Tabs>
+                              </div>
+                            </div>
+                            <div className="text-center footer-btns">
+                              <button className="bordered-btn gray full-width">Invalid pair</button>
+                            </div>
                           </div>
                         </div>
                       </div>

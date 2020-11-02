@@ -1,5 +1,5 @@
 /* Basic css */
-@import url("https://fonts.googleapis.com/css2?family=Chivo:wght@400;700&family=Heebo:wght@700&family=Karla:wght@700&family=Montserrat:ital,wght@0,500;0,900;1,900&family=Poppins:wght@200;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chivo:wght@400;700&family=Heebo:wght@700&family=Karla:wght@700&family=Montserrat:ital,wght@0,500;0,600;0,900;1,900&family=Poppins:wght@200;400;700&display=swap");
 
 html,
 body {
@@ -1235,7 +1235,7 @@ header .navbar .navbar-nav .nav-item .nav-link.primary-btn {
 }
 
 .modal-items {
-  border-top: 1px solid rgba(112,112,112,0.14);
+  border-top: 1px solid rgba(112, 112, 112, 0.14);
   padding-top: 15px;
   margin-top: 10px;
 }
@@ -1254,4 +1254,238 @@ header .navbar .navbar-nav .nav-item .nav-link.primary-btn {
 
 .modal-items .text-right .balance {
   color: #707070;
+}
+
+.bordered-btn.gray.red-btn {
+  background: #c91f66;
+  color: #fff;
+}
+
+.inner-box .single-box .inner-content {
+  padding: 20px 0px;
+}
+
+.small-note {
+  font-size: 10px;
+  font-weight: 600;
+  font-family: "Montserrat";
+  margin-top: 20px;
+}
+
+.small-note a,
+.small-note button {
+  background: transparent;
+  border: 0px;
+  color: #242166;
+}
+
+.settings {
+  position: absolute;
+  right: 40px;
+  top: 69px;
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  min-width: 300px;
+  visibility: hidden;
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+
+.settings.active {
+  visibility: visible;
+  opacity: 1;
+  z-index: 2;
+}
+
+.settings h4 {
+  font-size: 14px;
+  color: #242166;
+  font-weight: 600;
+}
+
+.settings h4.mb-3 {
+  color: #707070;
+  font-weight: 600;
+  margin-bottom: 10px !important;
+}
+
+.percent-select {
+  margin-bottom: 15px;
+}
+
+.percent-btn {
+  background: #f7f7f7;
+  border: 1px solid #edebeb;
+  border-radius: 500px;
+  margin-right: 6px;
+  padding: 0px 6px;
+  min-width: 45px;
+  text-align: right;
+  color: #707070;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all;
+}
+
+.percent-btn.active {
+  background: #f7f7f7;
+  border: 1px solid #edebeb;
+  border-radius: 500px;
+  margin-right: 6px;
+  padding: 0px 6px;
+  min-width: 45px;
+  text-align: right;
+  color: #707070;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.settings.dropdown {
+  min-width: auto;
+  right: 0;
+}
+
+.settings.dropdown ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: block;
+}
+
+.settings.dropdown ul li a {
+  display: block;
+  color: #707070;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 5px;
+}
+
+.settings.dropdown ul li a img {
+  margin-right: 5px;
+}
+
+.single-box.no-bd {
+  border: 0px;
+  padding-bottom: 0px;
+}
+.inner-box .single-box.gray {
+  border-color: #b8cad4;
+  margin-bottom: 15px;
+}
+
+.border-tp-btn {
+  width: 100%;
+  border: 1px solid #b8cad4;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #242166;
+  font-weight: 600;
+  padding: 5px;
+}
+
+.border-tp-btn img {
+  padding-left: 10px;
+}
+
+.single-card.exchange-card.opacity {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.34);
+  max-width: 90%;
+  margin: 0 auto;
+  margin-top: -50px;
+}
+
+.single-card.exchange-card {
+  z-index: 4;
+}
+.inner-box .single-box p.balance.green {
+  color: #129f00;
+}
+.single-box.no-bd {
+  padding: 20px;
+  padding-bottom: 0px;
+}
+
+.single-box.no-bd .single-box h4 {
+  font-weight: 600;
+}
+
+.single-box.no-bd .single-box p {
+  font-weight: 600;
+}
+.blue .span {
+  color: #242166;
+}
+
+.single-card .blue,
+.single-card .blue span {
+  color: #242166;
+}
+
+.inner-box .single-box .blue p.balance {
+  color: #242166;
+  font-weight: 600;
+  line-height: 1;
+}
+span.coin-name {
+  font-size: 14px;
+}
+
+.row.align-items-center.blue p {
+  margin-bottom: 0px;
+}
+
+.inner-box .single-box p.balance.small {
+  font-size: 10px;
+  margin-top: 10px;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.single-card span img {
+  padding-right: 5px;
+}
+
+.title-box {
+  position: relative;
+  padding: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-right: 25px;
+  padding-left: 30px;
+}
+
+.title-box .transparent-btn.back,
+.title-box .transparent-btn.what {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.title-box .transparent-btn.what {
+  left: auto;
+  right: 0;
+}
+
+.title-box h4 {
+  margin: 0px;
+  font-size: 18px;
+  color: #c91f66;
+  font-weight: 800;
+}
+button.border-tp-btn.clearfix {
+  padding: 15px 10px;
+}
+.wallet-top.no-grid{
+  display: block;
+}
+.percent-btn.pink {
+  border: 1px solid #C91F66;
+  background: transparent;
+  padding: 2px 6px;
+  margin-bottom: 5px;
 }

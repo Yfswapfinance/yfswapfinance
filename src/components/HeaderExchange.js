@@ -8,15 +8,50 @@ import '../assets/css/style.css';
 import '../assets/css/responsive.css';
 
 
+function toggleClass() {
+  var element = document.getElementById("settings");
+
+  if (element.classList) { 
+    element.classList.toggle("active");
+  } else {
+    var classes = element.className.split(" ");
+    var i = classes.indexOf("active");
+
+    if (i >= 0) 
+      classes.splice(i, 1);
+    else 
+      classes.push("active");
+      element.className = classes.join(" "); 
+  }
+}
+function toggleClassDropdown() {
+  var element = document.getElementById("dropdown");
+
+  if (element.classList) { 
+    element.classList.toggle("active");
+  } else {
+    var classes = element.className.split(" ");
+    var i = classes.indexOf("active");
+
+    if (i >= 0) 
+      classes.splice(i, 1);
+    else 
+      classes.push("active");
+      element.className = classes.join(" "); 
+  }
+}
 
 export default class HeaderExchange extends Component {
   
   state = {
-    isOpen: false
+    isOpen: false,
+    isActive:false
   };
+
 
   openModal = () => this.setState({ isOpen: true });
   closeModal = () => this.setState({ isOpen: false });
+  handleToggle = () => this.setState({ isActive: true });
 
   render() {
     return (
@@ -80,16 +115,38 @@ export default class HeaderExchange extends Component {
                         </button>
                       </li>
                       <li className="nav-item">
-                        <button className="transparent-btn"
-                          onClick={this.openModal} >
+                        <button className="transparent-btn" onClick={toggleClass}>
                           <img src={require("../assets/img/cog.svg")} alt="" />
                         </button>
+                        <div className="settings" id="settings">
+                          <h4>Transaction Settings</h4>
+                          <h4 className="mb-3">Slippage tolerances<button className="tp-btn" onClick={this.closeModal} > <img src={require("../assets/img/what-sign.svg")} alt="" /></button></h4>
+                          <div className="percent-select">
+                            <button className="percent-btn">0.1%</button>
+                            <button className="percent-btn">0.5%</button>
+                            <button className="percent-btn">1%</button>
+                            <button className="percent-btn selected">3.00%</button>
+                          </div>
+                          <h4 className="mb-3">Transaction dealine<button className="tp-btn" onClick={this.closeModal} > <img src={require("../assets/img/what-sign.svg")} alt="" /></button></h4>
+                          <div className="percent-select">
+                            <button className="percent-btn time">20</button> minutes
+                          </div>
+                        </div>
                       </li>
                       <li className="nav-item">
-                        <button className="transparent-btn"
-                          onClick={this.openModal} >
+                        <button className="transparent-btn"  onClick={toggleClassDropdown}>
                           <img src={require("../assets/img/dropdown.svg")} alt="" />
                         </button>
+                        <div className="settings dropdown" id="dropdown">
+                          <ul>
+                            <li>
+                              <a href="/"><img src={require("../assets/img/about.svg")} alt="About"/> About</a>
+                              <a href="/"><img src={require("../assets/img/docs.svg")} alt="Docs"/> Docs</a>
+                              <a href="/"><img src={require("../assets/img/code.svg")} alt="Code"/> Code</a>
+                              <a href="/"><img src={require("../assets/img/analytics.svg")} alt="Analytics"/> Analytics</a>
+                            </li>
+                          </ul>
+                        </div>
                       </li>
                     </ul>
                   </Navbar.Collapse>

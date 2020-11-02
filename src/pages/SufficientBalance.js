@@ -6,9 +6,8 @@ import '../assets/css/bootstrap.min.css';
 import '../assets/css/fontawesome.min.css';
 import '../assets/css/style.css';
 import '../assets/css/responsive.css';
-import { Link } from 'react-router-dom';
 
-export default class Exchange extends Component {
+export default class SufficientBalance extends Component {
   state = {
     isOpen: false
   };
@@ -47,10 +46,10 @@ export default class Exchange extends Component {
                                     <div className="row align-items-end">
                                       <div className="col-6 text-left">
                                         <h4>From (estimated)</h4>
-                                        <input type="number" step="0.0000000000000000001" min="0" autoComplete="off" placeholder="0.0" />
+                                        <input type="number" step="0.0000000000000000001" min="0" autoComplete="off" value="1" />
                                       </div>
                                       <div className="col-6 text-right">
-                                        <p className="balance">Balance: <span id="ethBalance">0.00</span></p>
+                                        <p className="balance">Balance: <span id="ethBalance">0.05</span></p>
                                         <div className="icons">
                                           <button className="transparent-btn">
                                             <img src={require("../assets/img/max.svg")} alt="Max" /> 
@@ -71,23 +70,35 @@ export default class Exchange extends Component {
                                     <div className="row align-items-end">
                                       <div className="col-6 text-left">
                                         <h4>to</h4>
-                                        <p className="convesion">0.0</p>
+                                        <p className="convesion">0.0311868</p>
                                       </div>
                                       <div className="col-6 text-right">
-                                        <p className="balance">Balance: <span id="ethBalance">0.00</span></p>
+                                        <p className="balance">Balance: <span id="ethBalance">0.05</span></p>
                                         <div className="icons">
-                                          <button className="transparent-btn red-btn"  onClick={this.openModal}>
-                                            Select a token <img src={require("../assets/img/white-arrow-down.svg")} alt="Arrow Down" /> 
+                                          <button className="transparent-btn"  onClick={this.openModal}>
+                                            <span><img src={require("../assets/img/wbtc.svg")} alt="WBTC" /></span> 
+                                            <span className="coin-name">WBTC</span>
+                                            <span><img src={require("../assets/img/angle-down-sm.svg")} alt="Angle Down" /></span>
                                           </button>
                                         </div>
                                       </div>
                                     </div>
                                   </div>
+                                  <div className="single-box no-bd">
+                                    <div className="row align-items-end">
+                                      <div className="col-4 text-left">
+                                        <h4>Price</h4>
+                                      </div>
+                                      <div className="col-8 text-right">
+                                        <p className="balance">0.0311868 WBTC per ETH <button className="tp-btn">
+                                            <img src={require("../assets/img/reload.svg")} alt="Reload" /> 
+                                          </button> </p>
+                                      </div>
+                                    </div>
+                                  </div>
                                 </div>
                                 <div className="text-center footer-btns">
-                                  <Link to="/insufficient-balance">
-                                    <button className="bordered-btn gray full-width">ENTER AN AMOUNT</button>
-                                  </Link>
+                                  <button className="bordered-btn gray red-btn full-width">Swap</button>
                                 </div>
                               </Tab>
                               <Tab eventKey="pool" title="Pool">
@@ -107,7 +118,7 @@ export default class Exchange extends Component {
                                     </div>
                                   </div>
                                   <div className="text-center small-note">
-                                    <span>Don’t see a pool you joined? <Link to="/import-pool" className="link">Import it</Link>  .</span>
+                                    <span>Don’t see a pool you joined? <a href="/" className="link">Import it</a>  .</span>
                                   </div>
                                 </div>
                               </Tab>

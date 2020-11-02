@@ -6,9 +6,8 @@ import '../assets/css/bootstrap.min.css';
 import '../assets/css/fontawesome.min.css';
 import '../assets/css/style.css';
 import '../assets/css/responsive.css';
-import { Link } from 'react-router-dom';
 
-export default class Exchange extends Component {
+export default class ConfirmSwap extends Component {
   state = {
     isOpen: false
   };
@@ -44,50 +43,86 @@ export default class Exchange extends Component {
                               <Tab eventKey="swap" title="Swap">
                                 <div className="inner-box mb-0">
                                   <div className="single-box">
-                                    <div className="row align-items-end">
+                                    <div className="row align-items-center">
                                       <div className="col-6 text-left">
-                                        <h4>From (estimated)</h4>
-                                        <input type="number" step="0.0000000000000000001" min="0" autoComplete="off" placeholder="0.0" />
+                                        <h4>Confirm Swap</h4>
                                       </div>
                                       <div className="col-6 text-right">
-                                        <p className="balance">Balance: <span id="ethBalance">0.00</span></p>
-                                        <div className="icons">
-                                          <button className="transparent-btn">
-                                            <img src={require("../assets/img/max.svg")} alt="Max" /> 
-                                          </button>
-                                          <button className="transparent-btn"  onClick={this.openModal}>
-                                            <span><img src={require("../assets/img/etherum.svg")} alt="Yfteh" /></span> 
-                                            <span className="coin-name">ETH</span>
-                                            <span><img src={require("../assets/img/angle-down-sm.svg")} alt="Angle Down" /></span>
-                                          </button>
-                                        </div>
+                                        <button className="transparent-btn">
+                                          <img src={require("../assets/img/close.svg")} alt="Close" /> 
+                                        </button>
+                                      </div>
+                                    </div>
+                                    <div className="row align-items-center blue">
+                                      <div className="col-6 text-left">
+                                        <span><img src={require("../assets/img/etherum.svg")} alt="Yfteh" /></span> 
+                                        <span className="coin-name">ETH</span>
+                                      </div>
+                                      <div className="col-6 text-right">
+                                        <p className="balance">1 ETH</p>
+                                      </div>
+                                    </div>
+                                    <div className="row align-items-center blue">
+                                      <div className="col-6 text-left">
+                                          <img src={require("../assets/img/pink-arrow-down.svg")} alt=""/>
+                                      </div>
+                                      <div className="col-6 text-right">
+                                      </div>
+                                    </div>
+                                    <div className="row align-items-center blue">
+                                      <div className="col-6 text-left">
+                                        <span><img src={require("../assets/img/wbtc.svg")} alt="wbtc" /></span> 
+                                        <span className="coin-name">0.0311868</span>
+                                      </div>
+                                      <div className="col-6 text-right">
+                                        <p className="balance">WBTC</p>
+                                      </div>
+                                    </div>
+                                    <div className="row align-items-center">
+                                      <div className="col-12 text-left">
+                                        <p className="balance small"><i>Output is estimated. You will receive at least 0.0300125 WBTC or the transaction will revert.</i></p>
                                       </div>
                                     </div>
                                   </div>
-                                  <div className="text-center">
-                                    <img src={require("../assets/img/pink-arrow-down.svg")} alt=""/>
-                                  </div>
-                                  <div className="single-box">
+                                  <div className="single-box no-bd">
+                                    <div className="row align-items-end">
+                                      <div className="col-4 text-left">
+                                        <h4>Price</h4>
+                                      </div>
+                                      <div className="col-8 text-right">
+                                        <p className="balance">0.0311868 WBTC per ETH <button className="tp-btn">
+                                            <img src={require("../assets/img/reload.svg")} alt="Reload" /> 
+                                          </button> </p>
+                                      </div>
+                                    </div>
                                     <div className="row align-items-end">
                                       <div className="col-6 text-left">
-                                        <h4>to</h4>
-                                        <p className="convesion">0.0</p>
+                                        <h4>Maximum Received </h4>
                                       </div>
                                       <div className="col-6 text-right">
-                                        <p className="balance">Balance: <span id="ethBalance">0.00</span></p>
-                                        <div className="icons">
-                                          <button className="transparent-btn red-btn"  onClick={this.openModal}>
-                                            Select a token <img src={require("../assets/img/white-arrow-down.svg")} alt="Arrow Down" /> 
-                                          </button>
-                                        </div>
+                                        <p className="balance">0.03103 WBTC</p>
+                                      </div>
+                                    </div>
+                                    <div className="row align-items-end">
+                                      <div className="col-6 text-left">
+                                        <h4>Price Impact </h4>
+                                      </div>
+                                      <div className="col-6 text-right">
+                                        <p className="balance green">0.28%</p>
+                                      </div>
+                                    </div>
+                                    <div className="row align-items-end">
+                                      <div className="col-8 text-left">
+                                        <h4>Liquidity Provider Fee</h4>
+                                      </div>
+                                      <div className="col-4 text-right">
+                                        <p className="balance">0.003 ETH</p>
                                       </div>
                                     </div>
                                   </div>
                                 </div>
                                 <div className="text-center footer-btns">
-                                  <Link to="/insufficient-balance">
-                                    <button className="bordered-btn gray full-width">ENTER AN AMOUNT</button>
-                                  </Link>
+                                  <button className="bordered-btn gray red-btn full-width">Confirm Swap</button>
                                 </div>
                               </Tab>
                               <Tab eventKey="pool" title="Pool">
@@ -107,7 +142,7 @@ export default class Exchange extends Component {
                                     </div>
                                   </div>
                                   <div className="text-center small-note">
-                                    <span>Don’t see a pool you joined? <Link to="/import-pool" className="link">Import it</Link>  .</span>
+                                    <span>Don’t see a pool you joined? <a href="/" className="link">Import it</a>  .</span>
                                   </div>
                                 </div>
                               </Tab>
