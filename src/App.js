@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './components/Header';
+import HeaderUser from './components/HeaderUser';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Menu from './pages/Menu';
@@ -17,8 +18,8 @@ function App() {
   return (
     <Router>
       <Switch>
-        {/* <Route exact path="/" component={null} /> */}
-        <Route component={Header} />
+        <Route exact path="/" component={Header} />
+        <Route component={HeaderUser} />
       </Switch>
         <Switch>
           <Route exact path="/">

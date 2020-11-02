@@ -1,12 +1,23 @@
-import React, { Component } from 'react'
+import React, { Component,useState } from 'react'
 import { Link,NavLink } from 'react-router-dom'
+import { Modal, Button } from 'react-bootstrap'
 
 import '../assets/css/bootstrap.min.css';
 import '../assets/css/fontawesome.min.css';
 import '../assets/css/style.css';
 import '../assets/css/responsive.css';
 
+
+
 export default class Header extends Component {
+  
+  state = {
+    isOpen: false
+  };
+
+  openModal = () => this.setState({ isOpen: true });
+  closeModal = () => this.setState({ isOpen: false });
+
   render() {
     return (
       <div>
@@ -61,10 +72,10 @@ export default class Header extends Component {
                         <NavLink className="nav-link" to="/staking" activeClassName="active">Staking</NavLink>
                       </li>
                       <li className="nav-item">
-                        <NavLink className="nav-link" to="/harvestpartytwo" activeClassName="active">Exchange</NavLink>
+                        <NavLink className="nav-link" to="/exchange" activeClassName="active">Exchange</NavLink>
                       </li>
                       <li className="nav-item opacity">
-                        <NavLink className="nav-link" to="/about"  activeClassName="active">Vote</NavLink>
+                        <NavLink className="nav-link" to="/vote"  activeClassName="active">Vote</NavLink>
                       </li>
                     </ul>
                     <ul className="navbar-nav ml-auto">
@@ -77,11 +88,11 @@ export default class Header extends Component {
                         </label>
                       </li>
                       <li className="nav-item">
-                        <a
+                        <button
                           className="nav-link primary-btn"
-                          href="/"
-                          >Connect Your Wallet</a
-                        >
+                          onClick={this.openModal} >
+                          Connect Your Wallet
+                        </button>
                       </li>
                     </ul>
                   </div>
@@ -91,6 +102,59 @@ export default class Header extends Component {
           </div>
         </header>
         {/* <!-- Header end --> */}
+        
+        {/* Connect Your Wallet Start */}
+          <Modal 
+          size="lg"
+          show={this.state.isOpen} onHide={this.closeModal}
+          aria-labelledby="contained-modal-title-vcenter"
+          centered
+          className="accountmodal"
+          >
+            <Modal.Body>
+            <div className="modal-title">
+              <h4>Select a wallet provider</h4>
+            </div>
+            <div className="stats">
+              <div className="row justify-content-center">
+                <div className="col-md-6">
+                  <div className="single-stats corps harvest">
+                    <div className="logo-wrap">
+                      <div className="icon-wrap">
+                        <img src={require("../assets/img/metamask.svg")} alt="" />
+                      </div>
+                      <h5>Metamask</h5>
+                    </div>
+                    
+                    <div className="text-center">
+                      <a href="/" className="bordered-btn blue">Connect</a>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-md-6">
+                  <div className="single-stats corps harvest">
+                    <div className="logo-wrap">
+                      <div className="icon-wrap">
+                        <img src={require("../assets/img/walletconnect.svg")} alt="" />
+                      </div>
+                      <h5>WalletConnect</h5>
+                    </div>
+                    
+                    <div className="text-center">
+                      <a href="/" className="bordered-btn blue">Connect</a>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-md-12">
+                  <div className="text-center">
+                    <a href="/" className="bordered-btn blue full-width">Connect</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </Modal.Body>
+          </Modal>
+        {/* Connect Your Wallet End */}
       </div>
     )
   }

@@ -51,7 +51,7 @@ export default class Staking extends Component {
                             </div>
                             
                             <div className="text-center">
-                              <a href="/" className="bordered-btn blue opacity">Harvest</a>
+                              <a href="/" className="bordered-btn blue opacity">Convert YFETH</a>
                             </div>
                           </div>
                         </div>
@@ -66,7 +66,7 @@ export default class Staking extends Component {
                             </div>
                             
                             <div className="text-center">
-                              <a href="/" className="bordered-btn blue">Approve BITTO-ETH SLP</a>
+                              <a href="/" className="bordered-btn blue">Approve YFETH</a>
                             </div>
                           </div>
                         </div>
