@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Helmet} from "react-helmet";
+import { Tabs, Tab, Modal, Navbar} from 'react-bootstrap'
 
 import '../assets/css/bootstrap.min.css';
 import '../assets/css/fontawesome.min.css';
@@ -7,6 +8,13 @@ import '../assets/css/style.css';
 import '../assets/css/responsive.css';
 
 export default class Exchange extends Component {
+  state = {
+    isOpen: false
+  };
+
+  openModal = () => this.setState({ isOpen: true });
+  closeModal = () => this.setState({ isOpen: false });
+
   render() {
     return (
       <div>
@@ -25,49 +33,108 @@ export default class Exchange extends Component {
           <section className="hero-section section-block" id="top">
             <div className="container">
               <div className="row justify-content-center">
-                <div className="col-lg-10">
+                <div className="col-lg-12">
                   <div className="hero-content text-center">
-                    <div className="row justify-content-center">
-                      <div className="col-lg-7">
-                        <div className="farming-title">
-                          <div className="logo">
-                            <img src={require("../assets/img/farming-icon.png")} alt="Farming" />
-                          </div>
-                          <h1>Stake YFETH, get YFETH.</h1>
-                          <p>Welcome to the Sushi Bar, stake YFETH to earn YFETH.</p>
-                        </div>
-                      </div>
-                    </div>
                     <div className="stats">
                       <div className="row justify-content-center">
-                        <div className="col-lg-4 col-md-6">
-                          <div className="single-stats corps harvest">
-                            <div className="logo-wrap">
-                              <div className="icon-wrap">
-                                <img src={require("../assets/img/yfeth-logo.svg")} alt="Yfeth Logo" />
-                              </div>
-                              <h4>0.000</h4>
-                              <p>xYFETH (mining)</p>
-                            </div>
-                            
-                            <div className="text-center">
-                              <a href="/" className="bordered-btn blue opacity">Convert YFETH</a>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="col-lg-4 col-md-6">
-                          <div className="single-stats corps harvest">
-                            <div className="logo-wrap">
-                              <div className="icon-wrap">
-                                <img src={require("../assets/img/farming-icon.png")} alt="Farming" />
-                              </div>
-                              <h4>0.000</h4>
-                              <p>YFETH Tokens Available</p>
-                            </div>
-                            
-                            <div className="text-center">
-                              <a href="/" className="bordered-btn blue">Approve YFETH</a>
-                            </div>
+                        <div className="col-lg-5 col-md-6">
+                          <div className="single-card exchange-card">
+                            <Tabs defaultActiveKey="swap" id="uncontrolled-tab-example">
+                              <Tab eventKey="swap" title="Swap">
+                                <div className="inner-box mb-0">
+                                  <div className="single-box">
+                                    <div className="row align-items-end">
+                                      <div className="col-6 text-left">
+                                        <h4>From (estimated)</h4>
+                                        <input type="number" step="0.0000000000000000001" min="0" autocomplete="off" placeholder="0.0" />
+                                      </div>
+                                      <div className="col-6 text-right">
+                                        <p className="balance">Balance: <span id="ethBalance">0.00</span></p>
+                                        <div className="icons">
+                                          <button className="transparent-btn">
+                                            <img src={require("../assets/img/max.svg")} alt="Max" /> 
+                                          </button>
+                                          <button className="transparent-btn"  onClick={this.openModal}>
+                                            <span><img src={require("../assets/img/etherum.svg")} alt="Yfteh" /></span> 
+                                            <span className="coin-name">ETH</span>
+                                            <span><img src={require("../assets/img/angle-down-sm.svg")} alt="Angle Down" /></span>
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div className="text-center">
+                                    <img src={require("../assets/img/pink-arrow-down.svg")} alt=""/>
+                                  </div>
+                                  <div className="single-box">
+                                    <div className="row align-items-end">
+                                      <div className="col-6 text-left">
+                                        <h4>to</h4>
+                                        <p className="convesion">0.0</p>
+                                      </div>
+                                      <div className="col-6 text-right">
+                                        <p className="balance">Balance: <span id="ethBalance">0.00</span></p>
+                                        <div className="icons">
+                                          <button className="transparent-btn red-btn"  onClick={this.openModal}>
+                                            Select a token <img src={require("../assets/img/white-arrow-down.svg")} alt="Arrow Down" /> 
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="text-center footer-btns">
+                                  <button class="bordered-btn gray full-width">ENTER AN AMOUNT</button>
+                                </div>
+                              </Tab>
+                              <Tab eventKey="pool" title="Pool">
+                                <div className="inner-box mb-0">
+                                  <div className="single-box">
+                                    <div className="row align-items-end">
+                                      <div className="col-6 text-left">
+                                        <h4>From (estimated)</h4>
+                                        <input type="number" step="0.0000000000000000001" min="0" autocomplete="off" placeholder="0.0" />
+                                      </div>
+                                      <div className="col-6 text-right">
+                                        <p className="balance">Balance: <span id="ethBalance">0.00</span></p>
+                                        <div className="icons">
+                                          <button className="transparent-btn">
+                                            <img src={require("../assets/img/max.svg")} alt="Max" /> 
+                                          </button>
+                                          <button className="transparent-btn"  onClick={this.openModal}>
+                                            <span><img src={require("../assets/img/etherum.svg")} alt="Yfteh" /></span> 
+                                            <span className="coin-name">ETH</span>
+                                            <span><img src={require("../assets/img/angle-down-sm.svg")} alt="Angle Down" /></span>
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div className="text-center">
+                                    <img src={require("../assets/img/pink-arrow-down.svg")} alt=""/>
+                                  </div>
+                                  <div className="single-box">
+                                    <div className="row align-items-end">
+                                      <div className="col-6 text-left">
+                                        <h4>to</h4>
+                                        <p className="convesion">0.0</p>
+                                      </div>
+                                      <div className="col-6 text-right">
+                                        <p className="balance">Balance: <span id="ethBalance">0.00</span></p>
+                                        <div className="icons">
+                                          <button className="transparent-btn red-btn"  onClick={this.openModal}>
+                                            Select a token <img src={require("../assets/img/white-arrow-down.svg")} alt="Arrow Down" /> 
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="text-center footer-btns">
+                                  <button class="bordered-btn gray full-width">ENTER AN AMOUNT</button>
+                                </div>
+                              </Tab>
+                            </Tabs>
                           </div>
                         </div>
                       </div>
@@ -75,14 +142,143 @@ export default class Exchange extends Component {
                   </div>
                 </div>
               </div>
-              <div className="row justify-content-center mt-5 pt-3">
-                <div className="col-lg-8 text-center">
-                  <p className="primary"><span role="img" aria-label="">⭐️</span> YFSWAP will integrate yield farming, staking, and DEX exchange. The fees (0.3%) are distributed partly(0.05%) for users staking rewards. YFSwap will take 0.045% for BUY BACK YFETH, causing a positive price growth, whereas the rest of the 0.3% (0.205%) is shared with the LP provider.</p>
-                </div>
-              </div>
             </div>
           </section>
           {/* <!-- Hero end --> */}
+
+          {/* Select Token Start */}
+          <Modal 
+          size="lg"
+          show={this.state.isOpen} onHide={this.closeModal}
+          aria-labelledby="contained-modal-title-vcenter"
+          centered
+          className="walletaccount selectcoin"
+          >
+            <Modal.Body>
+              <div className="wallet-body">
+                <div className="wallet-top">
+                  <h4 className="mb-3">Select a token<button className="tp-btn" onClick={this.closeModal} > <img src={require("../assets/img/what-sign.svg")} alt="" /></button></h4>
+                  <button className="transparent-btn"
+                    onClick={this.closeModal} >
+                    <img src={require("../assets/img/close.svg")} alt="" />
+                  </button>
+                </div>
+                <div className="form-search">
+                  <img src={require("../assets/img/search.svg")} alt="" />
+                  <input type="search" placeholder="Search name or paste address" /> 
+                </div>
+                <div className="wallet-top">
+                  <h4 className="mb-3">Token name</h4>
+                  <button className="transparent-btn pr-0">
+                    <img src={require("../assets/img/arrow-down-square.svg")} alt="" />
+                  </button>
+                </div>
+                <div className="modal-items">
+                  <div className="row align-items-end">
+                    <div className="col-6 text-left">
+                      <p className="balance">
+                        <img src={require("../assets/img/etherum.svg")} alt="Yfteh"/>ETH
+                      </p>
+                    </div>
+                    <div className="col-6 text-right">
+                      <p className="balance">0</p>
+                    </div>
+                  </div>
+                  <div className="row align-items-end">
+                    <div className="col-6 text-left">
+                      <p className="balance">
+                        <img src={require("../assets/img/wbtc.svg")} alt="WBTC"/>WBTC
+                      </p>
+                    </div>
+                    <div className="col-6 text-right">
+                      <p className="balance">0</p>
+                    </div>
+                  </div>
+                  <div className="row align-items-end">
+                    <div className="col-6 text-left">
+                      <p className="balance">
+                        <img src={require("../assets/img/etherum.svg")} alt="Yfteh"/>ETH
+                      </p>
+                    </div>
+                    <div className="col-6 text-right">
+                      <p className="balance">0</p>
+                    </div>
+                  </div>
+                  <div className="row align-items-end">
+                    <div className="col-6 text-left">
+                      <p className="balance">
+                        <img src={require("../assets/img/wbtc.svg")} alt="WBTC"/>WBTC
+                      </p>
+                    </div>
+                    <div className="col-6 text-right">
+                      <p className="balance">0</p>
+                    </div>
+                  </div>
+                  <div className="row align-items-end">
+                    <div className="col-6 text-left">
+                      <p className="balance">
+                        <img src={require("../assets/img/etherum.svg")} alt="Yfteh"/>ETH
+                      </p>
+                    </div>
+                    <div className="col-6 text-right">
+                      <p className="balance">0</p>
+                    </div>
+                  </div>
+                  <div className="row align-items-end">
+                    <div className="col-6 text-left">
+                      <p className="balance">
+                        <img src={require("../assets/img/wbtc.svg")} alt="WBTC"/>WBTC
+                      </p>
+                    </div>
+                    <div className="col-6 text-right">
+                      <p className="balance">0</p>
+                    </div>
+                  </div>
+                  <div className="row align-items-end">
+                    <div className="col-6 text-left">
+                      <p className="balance">
+                        <img src={require("../assets/img/etherum.svg")} alt="Yfteh"/>ETH
+                      </p>
+                    </div>
+                    <div className="col-6 text-right">
+                      <p className="balance">0</p>
+                    </div>
+                  </div>
+                  <div className="row align-items-end">
+                    <div className="col-6 text-left">
+                      <p className="balance">
+                        <img src={require("../assets/img/wbtc.svg")} alt="WBTC"/>WBTC
+                      </p>
+                    </div>
+                    <div className="col-6 text-right">
+                      <p className="balance">0</p>
+                    </div>
+                  </div>
+                  <div className="row align-items-end">
+                    <div className="col-6 text-left">
+                      <p className="balance">
+                        <img src={require("../assets/img/etherum.svg")} alt="Yfteh"/>ETH
+                      </p>
+                    </div>
+                    <div className="col-6 text-right">
+                      <p className="balance">0</p>
+                    </div>
+                  </div>
+                  <div className="row align-items-end">
+                    <div className="col-6 text-left">
+                      <p className="balance">
+                        <img src={require("../assets/img/wbtc.svg")} alt="WBTC"/>WBTC
+                      </p>
+                    </div>
+                    <div className="col-6 text-right">
+                      <p className="balance">0</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Modal.Body>
+          </Modal>
+        {/* Select Token end */}
       </div>
     )
   }

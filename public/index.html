@@ -57,6 +57,10 @@
     chk.addEventListener('change', () => {
       document.body.classList.toggle('dark');
     });
+    
+    if (document.location.pathname.indexOf("/exchange/") == 0) {
+      document.body.className = "gradient-bg";
+    }
 
   </script>
 </html>

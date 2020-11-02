@@ -13,12 +13,12 @@ body {
   font-weight: 400;
   line-height: 1.5;
   font-size: 16px;
-  background-color: #cbe1ef;
 }
 
 img {
   max-width: 100%;
   height: auto;
+  vertical-align: middle;
 }
 
 h1,
@@ -218,7 +218,12 @@ header .navbar .navbar-nav .nav-item .nav-link.primary-btn {
   -ms-flex-align: center;
   align-items: center;
   padding: 170px 0px 90px;
+  background-color: #cbe1ef;
 }
+.dark .hero-section {
+  background-color: #242166;
+}
+
 header .navbar .navbar-nav .nav-item.opacity .nav-link {
   opacity: 0.5;
 }
@@ -342,6 +347,10 @@ header .navbar .navbar-nav .nav-item.opacity .nav-link {
 footer {
   padding: 50px 0px;
   position: relative;
+  background-color: #cbe1ef;
+}
+.dark footer {
+  background-color: #242166;
 }
 
 footer .socials-icon a {
@@ -795,10 +804,6 @@ footer .socials-icon a:hover {
   color: #242166;
 }
 
-body.dark {
-  background-color: #242166;
-}
-
 .dark header {
   background-color: #242166;
 }
@@ -1068,8 +1073,8 @@ header .navbar .navbar-nav .nav-item .nav-link.primary-btn {
 .walletaccount .modal-content .modal-bottom {
   padding: 30px 20px 30px 40px;
   background: #242166;
-  border-bottom-left-radius: 34px;
-  border-bottom-right-radius: 34px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 
 .walletaccount .modal-content .modal-bottom h4 {
@@ -1097,6 +1102,7 @@ header .navbar .navbar-nav .nav-item .nav-link.primary-btn {
   position: absolute;
   right: 20px;
   top: 29px;
+  font-size: 14px;
 }
 
 .transparent-btn.blue {
@@ -1117,3 +1123,135 @@ header .navbar .navbar-nav .nav-item .nav-link.primary-btn {
   font-size: 14px;
 }
 
+.single-card.exchange-card {
+  box-shadow: none;
+  padding: 0px;
+  padding-bottom: 20px;
+}
+
+.single-card.exchange-card .inner-box {
+  box-shadow: none;
+}
+
+.single-card.exchange-card .nav-tabs {
+  text-align: center;
+  border: 0px;
+  margin-bottom: 20px;
+}
+
+.single-card.exchange-card .nav-tabs .nav-link {
+  width: 50%;
+  background: transparent;
+  border: 0px;
+  color: #707070;
+  font-size: 18px;
+  font-weight: 800;
+  padding: 20px;
+  background: #f7f7f7;
+}
+
+.single-card.exchange-card .nav-tabs .nav-link:first-child {
+  border-top-left-radius: 15px;
+}
+
+.single-card.exchange-card .nav-tabs .nav-link:last-child {
+  border-top-right-radius: 15px;
+}
+
+.single-card.exchange-card .nav-tabs .nav-link.active {
+  background-color: #fff;
+  color: #c91f66;
+}
+.transparent-btn .coin-name {
+  font-size: 12px;
+  display: inline-block;
+  padding-left: 5px;
+  padding-right: 2px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #242166;
+}
+.single-card.exchange-card .single-box input {
+  border: 0px;
+  font-size: 20px;
+  color: #a7a6c2;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+}
+
+.inner-box .single-box p.convesion {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  color: #a7a6c2;
+}
+
+.transparent-btn.red-btn {
+  background-color: #c91f66;
+  border-radius: 7px;
+  color: #fff;
+  font-size: 12px;
+  padding: 3px 8px;
+}
+
+.footer-btns {
+  padding: 0px 20px;
+}
+
+.bordered-btn.gray {
+  background: #f7f7f7;
+  border: 0px;
+  box-shadow: none;
+  color: #707070;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.tp-btn {
+  border: 0px;
+  background: transparent;
+}
+
+.form-search {
+  position: relative;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.form-search input {
+  width: 100%;
+  border: 1px solid #c91f66;
+  border-radius: 11px;
+  min-height: 50px;
+  padding-left: 40px;
+}
+
+.form-search img {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.modal-items {
+  border-top: 1px solid rgba(112,112,112,0.14);
+  padding-top: 15px;
+  margin-top: 10px;
+}
+
+.modal-items .balance {
+  margin-bottom: 10px;
+  padding-right: 5px;
+  color: #242166;
+  font-size: 14px;
+}
+
+.modal-items .balance img {
+  padding-right: 5px;
+  max-width: 25px;
+}
+
+.modal-items .text-right .balance {
+  color: #707070;
+}

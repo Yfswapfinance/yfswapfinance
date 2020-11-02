@@ -144,7 +144,7 @@ export default class HeaderExchange extends Component {
         {/* My wallet Balance Start */}
         
         {/* My wallet Balance Start */}
-          {/* <Modal 
+          <Modal 
           size="lg"
           show={this.state.isOpen} onHide={this.closeModal}
           aria-labelledby="contained-modal-title-vcenter"
@@ -182,7 +182,7 @@ export default class HeaderExchange extends Component {
                 <h4>Your transactions will appear here…</h4>
               </div>
             </Modal.Body>
-          </Modal> */}
+          </Modal>
         {/* My wallet Balance end */}
 
         {/* My wallet Transaction Start */}
